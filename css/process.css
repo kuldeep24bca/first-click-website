@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Process — dark module: 4 connected steps, promise card + delivery times
+   ========================================================================== */
+
+.process::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: -420px;
+  width: 1100px;
+  height: 700px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 122, 47, 0.14), transparent);
+}
+
+.process-steps {
+  position: relative;
+  counter-reset: step;
+}
+
+/* Connector line running through the step numbers */
+.process-steps::before {
+  content: "";
+  position: absolute;
+  top: calc(clamp(24px, 2.3vw, 32px) + 24px);
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 47, 0.5), transparent);
+  pointer-events: none;
+}
+
+.process-step {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.process-step-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--s-2);
+}
+
+.process-num {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-sm);
+  background: var(--orange);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+}
+
+.process-step .card-title {
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.process-bottom {
+  margin-top: var(--gap);
+}
+
+.process-promise {
+  grid-column: span 8;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  background: var(--surface-2);
+}
+
+.process-promise-title {
+  font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: 20ch;
+}
+
+.process-promise-title span {
+  color: var(--orange-bright);
+}
+
+.process-timeline {
+  grid-column: span 4;
+  display: grid;
+  gap: var(--s-2);
+}
+
+.process-timeline-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.process-timeline-label .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.process-timeline dl {
+  display: grid;
+}
+
+.process-timeline dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--fs-sm);
+}
+
+.process-timeline dl div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.process-timeline dt {
+  color: var(--text-2);
+}
+
+.process-timeline dd {
+  font-weight: 600;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1023px) {
+  .process-steps::before {
+    display: none;
+  }
+
+  .process-step {
+    grid-column: span 6;
+  }
+
+  .process-promise,
+  .process-timeline {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .process-steps::before {
+    display: block;
+    top: 24px;
+    bottom: 24px;
+    left: calc(clamp(24px, 2.3vw, 32px) + 24px);
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, transparent, rgba(255, 122, 47, 0.5), transparent);
+  }
+
+  .process-step {
+    grid-column: 1 / -1;
+  }
+
+  .process-promise .btn {
+    width: 100%;
+  }
+}

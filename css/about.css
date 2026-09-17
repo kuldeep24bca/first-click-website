@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Why trust us — founder photo + story, 4 principle cards, closing line
+   ========================================================================== */
+
+.about-grid {
+  row-gap: var(--s-6);
+  align-items: center;
+}
+
+.about-photo {
+  grid-column: 1 / span 5;
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  transition: transform 0.8s var(--ease);
+}
+
+.about-photo:hover img {
+  transform: scale(1.03);
+}
+
+.about-photo-caption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: var(--r-md);
+  background: rgba(21, 17, 14, 0.82);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  line-height: 1.35;
+}
+
+.about-photo-caption strong {
+  font-size: var(--fs-body);
+  color: #ffffff;
+}
+
+.about-photo-caption span {
+  font-size: var(--fs-xs);
+  color: #d9d0c6;
+}
+
+.about-content {
+  grid-column: 7 / span 6;
+  display: grid;
+  gap: var(--s-3);
+  justify-items: start;
+}
+
+.about-content .h2 {
+  margin-top: calc(var(--s-1) * -1);
+}
+
+.about-quote {
+  padding-left: var(--s-3);
+  border-left: 3px solid var(--orange);
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.about-bio {
+  display: grid;
+  gap: var(--s-2);
+  max-width: 60ch;
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+.about-bio strong {
+  color: var(--ink);
+}
+
+.about-highlights {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+.about-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-highlight .icon-tile {
+  margin-bottom: var(--s-1);
+}
+
+.about-closing {
+  grid-column: 2 / span 10;
+  text-align: center;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--ink-2);
+  text-wrap: balance;
+}
+
+.about-closing strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+@media (max-width: 1023px) {
+  .about-photo {
+    grid-column: 1 / span 5;
+    align-self: start;
+  }
+
+  .about-content {
+    grid-column: 6 / span 7;
+    padding-left: var(--s-2);
+  }
+
+  .about-highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-closing {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-grid {
+    row-gap: var(--s-4);
+  }
+
+  .about-photo,
+  .about-content {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
+
+  .about-photo {
+    aspect-ratio: 4 / 4.2;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-highlights {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

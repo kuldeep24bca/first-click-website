@@ -1,0 +1,192 @@
+/* ==========================================================================
+   Pricing — 3 aligned plans (popular in dark), included-with-every-package band
+   ========================================================================== */
+
+.plan {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.plan-head {
+  display: grid;
+  gap: 6px;
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.plan-name {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.plan-for {
+  min-height: 3.2em;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.plan-price {
+  margin-top: var(--s-1);
+  font-size: clamp(2.5rem, 2rem + 1.4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--s-1);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.plan-time .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+}
+
+.plan-features {
+  flex: 1;
+}
+
+.plan-features li {
+  color: var(--text-2);
+}
+
+.plan-cta {
+  margin-top: var(--s-1);
+}
+
+/* Most popular */
+.plan--popular {
+  background: var(--night);
+  border-color: var(--night);
+  box-shadow: 0 24px 48px -28px rgba(23, 19, 15, 0.6);
+}
+
+.plan-flag {
+  position: absolute;
+  top: clamp(24px, 2.3vw, 32px);
+  right: clamp(24px, 2.3vw, 32px);
+  padding: 6px 10px;
+  border-radius: var(--r-xs);
+  background: var(--orange);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Included band */
+.included {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: var(--s-4);
+  margin-top: var(--s-2);
+  background: var(--cream);
+  border-color: var(--line);
+}
+
+.included-head {
+  grid-column: 1 / span 4;
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+}
+
+.included-title {
+  font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.included-list {
+  grid-column: 6 / span 7;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-3) var(--s-4);
+}
+
+.included-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.included-list .icon-tile {
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.included-list .icon-tile .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.included-list strong {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.included-list span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+@media (max-width: 1023px) {
+  .plan {
+    grid-column: 1 / -1;
+  }
+
+  .plan-for {
+    min-height: 0;
+  }
+
+  .included-head,
+  .included-list {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .pricing-grid .plan {
+    grid-column: span 6;
+  }
+
+  .pricing-grid .plan--popular {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .plan--popular {
+    order: -1;
+  }
+
+  .included-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

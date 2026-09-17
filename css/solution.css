@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Solution — "digital home" bento: link visual, chat visual, wide pillars card
+   ========================================================================== */
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  overflow: hidden;
+}
+
+.solution-card--link {
+  grid-column: span 7;
+}
+
+.solution-card--chat {
+  grid-column: span 5;
+}
+
+.solution-copy {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.solution-copy .card-text {
+  max-width: 56ch;
+}
+
+.solution-visual {
+  border-radius: var(--r-md);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: var(--s-3);
+}
+
+/* Link visual */
+.link-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: var(--r-sm);
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.link-bar .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--orange);
+}
+
+.link-sections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.link-sections li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--r-sm);
+  background: var(--white);
+  border: 1px solid var(--line);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: transform var(--t-med) var(--ease);
+}
+
+.link-sections .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--ink-3);
+}
+
+.link-sections li.is-contact {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #ffffff;
+}
+
+.link-sections li.is-contact .icon {
+  color: #ffffff;
+}
+
+.solution-card--link:hover .link-sections li:nth-child(odd) {
+  transform: translateY(-2px);
+}
+
+/* Chat visual */
+.chat-visual {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  min-height: 176px;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.chat-bubble--in {
+  justify-self: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 4px;
+  color: var(--ink-2);
+}
+
+.chat-bubble--out {
+  justify-self: end;
+  background: var(--ink);
+  border-bottom-right-radius: 4px;
+  color: #ffffff;
+}
+
+.chat-bubble--out b {
+  font-weight: 600;
+  color: var(--orange-bright);
+}
+
+.solution-card--chat em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Wide card */
+.solution-card--wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-6);
+  background: var(--orange-50);
+  border-color: var(--orange-100);
+}
+
+.solution-card--wide .solution-copy {
+  margin-top: 0;
+  flex: 1 1 46%;
+}
+
+.solution-wide-title {
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.pillars {
+  flex: 1 1 54%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pillar {
+  display: grid;
+  gap: 12px;
+  padding: var(--s-3) 20px;
+  border-radius: var(--r-md);
+  background: var(--white);
+  border: 1px solid var(--orange-100);
+}
+
+.pillar strong {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+@media (max-width: 1023px) {
+  .solution-card--link,
+  .solution-card--chat {
+    grid-column: 1 / -1;
+  }
+
+  .solution-card--wide {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--s-4);
+  }
+}
+
+@media (max-width: 767px) {
+  .solution-visual {
+    padding: var(--s-2);
+  }
+
+  .link-sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pillar {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  .pillar .icon-tile {
+    width: 40px;
+    height: 40px;
+  }
+}

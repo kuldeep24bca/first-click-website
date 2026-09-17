@@ -1,0 +1,152 @@
+/* ==========================================================================
+   FAQ — sticky intro + help card beside an accessible accordion
+   ========================================================================== */
+
+.faq-layout {
+  align-items: start;
+}
+
+.faq-aside {
+  grid-column: 1 / span 4;
+  position: sticky;
+  top: calc(var(--nav-h) + var(--s-3));
+}
+
+.faq-aside .section-head {
+  margin-bottom: var(--s-4);
+}
+
+.faq-help {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-help .btn {
+  margin-top: var(--s-1);
+}
+
+.faq-list {
+  grid-column: 6 / span 7;
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  border-radius: var(--r-md);
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: border-color var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+}
+
+.faq-item:hover {
+  border-color: var(--line-strong);
+}
+
+.faq-item.is-open {
+  border-color: var(--orange-200);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item h3 {
+  font-size: inherit;
+  letter-spacing: normal;
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2);
+  width: 100%;
+  min-height: 64px;
+  padding: 18px 20px 18px 24px;
+  text-align: left;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  border-radius: var(--r-md);
+}
+
+.faq-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: var(--r-xs);
+  background: var(--cream);
+  color: var(--ink);
+  transition: transform var(--t-med) var(--ease), background-color var(--t-med) var(--ease),
+    color var(--t-med) var(--ease);
+}
+
+.faq-icon .icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.faq-q:hover .faq-icon {
+  background: var(--orange-50);
+  color: var(--orange);
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--orange);
+  color: #ffffff;
+}
+
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--t-med) var(--ease);
+}
+
+.faq-a > div {
+  overflow: hidden;
+}
+
+.faq-item.is-open .faq-a {
+  grid-template-rows: 1fr;
+}
+
+.faq-a p {
+  padding: 0 72px 22px 24px;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* Without JS every answer stays readable */
+html:not(.js) .faq-a {
+  grid-template-rows: 1fr;
+}
+
+@media (max-width: 1023px) {
+  .faq-aside {
+    grid-column: 1 / -1;
+    position: static;
+  }
+
+  .faq-help {
+    display: none;
+  }
+
+  .faq-list {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-q {
+    padding: 16px 16px 16px 20px;
+    font-size: var(--fs-sm);
+  }
+
+  .faq-a p {
+    padding: 0 20px 20px;
+  }
+}

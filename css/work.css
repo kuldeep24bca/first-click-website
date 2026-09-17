@@ -1,0 +1,421 @@
+/* ==========================================================================
+   What we build — dark module with HTML/CSS website mockups
+   Mock internals scale with the card via container query units.
+   ========================================================================== */
+
+.work::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 720px;
+  height: 720px;
+  right: -240px;
+  top: -320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 47, 0.16), transparent 65%);
+}
+
+.work-card {
+  grid-column: span 5;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 12px 20px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+}
+
+.work-card--lg {
+  grid-column: span 7;
+  grid-row: span 2;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}
+
+.work-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding-inline: 8px;
+  margin-top: auto;
+}
+
+.work-meta .tag {
+  background: rgba(255, 122, 47, 0.12);
+  border-color: transparent;
+  color: var(--orange-bright);
+}
+
+.work-title {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+/* ---------- Browser mock ---------- */
+
+.mock {
+  container-type: inline-size;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.work-card--lg .mock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  background: #efe9e1;
+}
+
+.mock-bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d6ccbf;
+}
+
+.mock-bar span {
+  flex: 0 1 220px;
+  margin-inline: auto;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mock-page {
+  font-size: clamp(9px, 2.1cqi, 14px);
+  line-height: 1.35;
+  color: var(--ink);
+  padding: 1.4em 1.6em 1.6em;
+  overflow: hidden;
+  transition: transform 0.6s var(--ease);
+}
+
+.work-card:hover .mock-page {
+  transform: translateY(-4px);
+}
+
+.m-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+  font-size: 0.9em;
+  color: var(--ink-3);
+}
+
+.m-nav b {
+  margin-right: auto;
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.m-nav em {
+  font-style: normal;
+  font-weight: 600;
+  padding: 0.5em 0.9em;
+  border-radius: 0.5em;
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.m-btn {
+  display: inline-block;
+  padding: 0.7em 1.1em;
+  border-radius: 0.5em;
+  background: var(--orange);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+/* Salon */
+.mock-salon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  background: #fffaf6;
+}
+
+.m-salon-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.6em;
+  align-items: center;
+}
+
+.m-salon-hero small {
+  display: block;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.m-salon-hero strong {
+  display: block;
+  margin: 0.4em 0 0.9em;
+  font-size: 2.3em;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.m-salon-art {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 1em;
+  overflow: hidden;
+  background: linear-gradient(160deg, #ffd9c2, #f7b996 60%, #e99a72);
+}
+
+.m-salon-art i {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.m-salon-art i:nth-child(1) {
+  width: 62%;
+  height: 62%;
+  left: 19%;
+  top: 10%;
+  background: #fff1e7;
+}
+
+.m-salon-art i:nth-child(2) {
+  width: 100%;
+  height: 60%;
+  left: 0;
+  bottom: -30%;
+  border-radius: 50% 50% 0 0;
+  background: var(--ink);
+}
+
+.m-salon-art i:nth-child(3) {
+  width: 22%;
+  height: 22%;
+  right: 8%;
+  top: 8%;
+  background: var(--orange);
+}
+
+.m-salon-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.m-salon-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1em;
+}
+
+.m-salon-list span {
+  color: var(--ink-2);
+}
+
+.m-salon-list b {
+  font-weight: 600;
+}
+
+.m-salon-foot {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-top: auto;
+  font-size: 0.9em;
+  color: var(--ink-3);
+}
+
+.m-salon-foot span {
+  color: var(--orange);
+  letter-spacing: 0.1em;
+}
+
+/* Coach */
+.mock-coach {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.mock-coach .m-nav {
+  color: #a49b92;
+}
+
+.mock-coach .m-nav b {
+  color: #ffffff;
+}
+
+.mock-coach .m-nav em {
+  background: var(--orange);
+}
+
+.m-coach-title {
+  display: block;
+  margin: 1.2em 0 1em;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  max-width: 14ch;
+}
+
+.m-coach-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6em;
+}
+
+.m-coach-cards div {
+  display: grid;
+  gap: 0.3em;
+  padding: 0.9em;
+  border-radius: 0.6em;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.m-coach-cards small {
+  font-size: 0.85em;
+  color: #a49b92;
+}
+
+.m-coach-cards b {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.m-coach-cards .is-pop {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.m-coach-cards .is-pop small {
+  color: #fff1e7;
+}
+
+/* Realty */
+.mock-realty {
+  background: #ffffff;
+}
+
+.m-realty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7em;
+  margin-top: 1.4em;
+}
+
+.m-realty-grid div {
+  display: grid;
+  gap: 0.25em;
+  font-size: 0.95em;
+}
+
+.m-realty-grid i {
+  aspect-ratio: 4 / 3.2;
+  margin-bottom: 0.4em;
+  border-radius: 0.6em;
+  background: linear-gradient(180deg, #e9e3da 0 55%, #d8cfc3 55%);
+  position: relative;
+  overflow: hidden;
+}
+
+.m-realty-grid i::after {
+  content: "";
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  bottom: 45%;
+  height: 34%;
+  background: #ffffff;
+  clip-path: polygon(50% 0, 100% 45%, 100% 100%, 0 100%, 0 45%);
+}
+
+.m-realty-grid div:nth-child(2) i {
+  background: linear-gradient(180deg, #ffe9d9 0 55%, #ffd4b5 55%);
+}
+
+.m-realty-grid small {
+  color: var(--ink-2);
+}
+
+.m-realty-grid b {
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.work-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--border);
+}
+
+.work-footer p {
+  font-size: var(--fs-lead);
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 1023px) {
+  .work-card,
+  .work-card--lg {
+    grid-column: span 6;
+    grid-row: auto;
+  }
+
+  .work-card--lg {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-card,
+  .work-card--lg {
+    grid-column: 1 / -1;
+  }
+
+  .mock-page {
+    font-size: clamp(8px, 2.6cqi, 12px);
+  }
+
+  .m-nav span {
+    display: none;
+  }
+
+  .work-footer .btn {
+    width: 100%;
+  }
+}

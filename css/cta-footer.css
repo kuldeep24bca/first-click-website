@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Final CTA (orange module) & footer
+   ========================================================================== */
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 80% at 100% 50%, #000, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 80% at 100% 50%, #000, transparent 70%);
+}
+
+.cta-grid {
+  align-items: center;
+  row-gap: var(--s-6);
+}
+
+.cta-copy {
+  grid-column: 1 / span 7;
+  display: grid;
+  gap: var(--s-2);
+  justify-items: start;
+}
+
+.cta-title {
+  color: #ffffff;
+}
+
+.cta .section-sub {
+  color: #ffffff;
+  max-width: 48ch;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: var(--s-2);
+}
+
+.cta-summary {
+  grid-column: 9 / span 4;
+  display: grid;
+  border-radius: var(--r-lg);
+  background: #ffffff;
+  padding: var(--s-1) var(--s-3);
+  box-shadow: 0 30px 60px -30px rgba(60, 20, 0, 0.55);
+}
+
+.cta-summary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-2);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cta-summary li:last-child {
+  border-bottom: 0;
+}
+
+.cta-summary span {
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
+
+.cta-summary strong {
+  font-size: var(--fs-body);
+  font-weight: 600;
+  text-align: right;
+  color: var(--ink);
+}
+
+.cta-summary li:first-child strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--orange);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--night);
+  color: var(--text-2);
+  padding-top: var(--s-12);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--s-6) var(--gap);
+  padding-bottom: var(--s-8);
+}
+
+.footer-brand {
+  grid-column: 1 / span 5;
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+}
+
+.footer-brand p {
+  max-width: 44ch;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
+.footer-nav {
+  grid-column: 7 / span 2;
+}
+
+.footer-cta {
+  grid-column: 10 / span 3;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  align-content: start;
+}
+
+.footer-label {
+  margin-bottom: var(--s-2);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.footer-cta .footer-label {
+  margin-bottom: 0;
+}
+
+.footer-nav ul {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-nav a {
+  display: inline-block;
+  padding: 6px 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  transition: color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.footer-cta-text {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+
+.footer-cta-text strong {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding-block: var(--s-3);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+}
+
+.footer-top-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .cta-copy,
+  .cta-summary {
+    grid-column: 1 / -1;
+  }
+
+  .cta-summary {
+    max-width: 520px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-nav {
+    grid-column: 1 / span 5;
+  }
+
+  .footer-cta {
+    grid-column: 7 / span 6;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .site-footer {
+    padding-top: var(--s-8);
+    padding-bottom: 88px;
+  }
+
+  .footer-nav,
+  .footer-cta {
+    grid-column: 1 / -1;
+  }
+
+  .footer-nav ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

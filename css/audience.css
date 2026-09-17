@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Who it's for — 2 featured cards + 8 compact cards on a 12-col bento
+   ========================================================================== */
+
+.audience-card {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audience-card .icon-tile {
+  margin-bottom: var(--s-1);
+}
+
+.audience-card--feature {
+  grid-column: span 6;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.audience-card--feature .icon-tile {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0;
+}
+
+.audience-card--feature .card-title {
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--s-2);
+}
+
+/* Closing card doubles as a CTA */
+.audience-card--cta {
+  background: var(--ink);
+  border-color: var(--ink);
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+}
+
+.audience-card--cta .card-title {
+  color: #ffffff;
+}
+
+.audience-card--cta .card-text {
+  color: #cfc6bc;
+}
+
+.audience-card--cta .icon-tile {
+  background: rgba(255, 122, 47, 0.14);
+  color: var(--orange-bright);
+}
+
+.audience-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: var(--s-1);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--orange-bright);
+}
+
+.audience-cta-link .icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.audience-card--cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px -18px rgba(23, 19, 15, 0.55);
+}
+
+.audience-card--cta:hover .audience-cta-link .icon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1023px) {
+  .audience-card {
+    grid-column: span 6;
+  }
+
+  .audience-card--feature {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .audience-card--feature {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .audience-card--feature .icon-tile {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .audience-card {
+    grid-column: 1 / -1;
+  }
+
+  .audience-card--feature {
+    padding: 20px;
+  }
+}

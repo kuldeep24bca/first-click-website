@@ -1,0 +1,13 @@
+# Local tooling
+.vercel
+.DS_Store
+
+# Legacy template files (not used by the site)
+components/
+claude/
+
+# Publish only the images the page uses
+images/*
+!images/favicon.svg
+!images/kuldeep-hero.webp
+!images/kuldeep-portrait.webp

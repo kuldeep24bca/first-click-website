@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Design Tokens — First Click
+   White + orange system. One brand orange (#CC4D06, 4.5:1 with white text),
+   a brighter orange reserved for dark surfaces, warm neutrals, warm near-black.
+   ========================================================================== */
+
+:root {
+  /* Brand */
+  --orange: #cc4d06;
+  --orange-hover: #b04204;
+  --orange-bright: #ff7a2f;
+  --orange-50: #fff6ef;
+  --orange-100: #ffe9d9;
+  --orange-200: #ffd4b5;
+
+  /* Neutrals (warm family) */
+  --white: #ffffff;
+  --cream: #f8f4ee;
+  --ink: #17130f;
+  --ink-2: #4f4740;
+  --ink-3: #6f675f;
+  --line: #ebe5dc;
+  --line-strong: #d8cfc3;
+
+  --night: #15110e;
+  --night-2: #1f1a16;
+  --night-3: #2a241f;
+
+  /* Semantic (light default — overridden by theme classes) */
+  --bg: var(--white);
+  --surface: var(--white);
+  --surface-2: var(--cream);
+  --text: var(--ink);
+  --text-2: var(--ink-2);
+  --text-3: var(--ink-3);
+  --border: var(--line);
+  --border-strong: var(--line-strong);
+  --accent: var(--orange);
+  --icon-bg: var(--orange-50);
+  --focus: var(--orange);
+
+  /* Typography */
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-display: clamp(2.5rem, 1.3rem + 4.4vw, 4.75rem);
+  --fs-h2: clamp(2rem, 1.35rem + 2.3vw, 3.25rem);
+  --fs-h3: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --fs-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.9375rem;
+  --fs-xs: 0.8125rem;
+
+  /* Spacing scale: 8 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 120 */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --s-6: 48px;
+  --s-8: 64px;
+  --s-10: 80px;
+  --s-12: 96px;
+  --s-15: 120px;
+
+  /* Layout */
+  --container: 1240px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --gap: 16px;
+  --section-y: clamp(80px, 9vw, 120px);
+  --nav-h: 72px;
+
+  /* Radii — tighter inside, softer on containers */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+
+  /* Elevation (warm-tinted, low) */
+  --shadow-sm: 0 1px 2px rgba(23, 19, 15, 0.06);
+  --shadow-md: 0 12px 28px -12px rgba(23, 19, 15, 0.18);
+  --shadow-orange: 0 12px 24px -10px rgba(204, 77, 6, 0.5);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 0.2s;
+  --t-med: 0.35s;
+
+  /* Z-index scale */
+  --z-sticky: 40;
+  --z-nav: 50;
+  --z-skip: 70;
+}
+
+/* Surface themes */
+.theme-cream {
+  --bg: var(--cream);
+  --surface: var(--white);
+  --surface-2: var(--white);
+}
+
+.theme-dark {
+  --bg: var(--night);
+  --surface: var(--night-2);
+  --surface-2: var(--night-3);
+  --text: #ffffff;
+  --text-2: #cfc6bc;
+  --text-3: #a49b92;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --accent: var(--orange-bright);
+  --icon-bg: rgba(255, 122, 47, 0.12);
+  --focus: var(--orange-bright);
+}
+
+.theme-orange {
+  --bg: var(--orange);
+  --text: #ffffff;
+  --text-2: #fff1e7;
+  --text-3: #ffe2cf;
+  --border: rgba(255, 255, 255, 0.24);
+  --border-strong: rgba(255, 255, 255, 0.4);
+  --accent: #ffffff;
+  --focus: #ffffff;
+}

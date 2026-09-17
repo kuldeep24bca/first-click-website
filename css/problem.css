@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Problem — dark module, 3 + 2 bento of pain points
+   ========================================================================== */
+
+.problem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000, transparent 75%);
+}
+
+.problem-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  grid-column: span 4;
+  min-height: 240px;
+}
+
+.problem-card--wide {
+  grid-column: span 6;
+  min-height: 0;
+}
+
+.problem-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: auto;
+  padding-bottom: var(--s-3);
+}
+
+.problem-num {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.problem-card .card-title {
+  max-width: 24ch;
+}
+
+/* The punchline card */
+.problem-card--accent {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.problem-card--accent .card-title,
+.problem-card--accent .card-text,
+.problem-card--accent .problem-num {
+  color: #ffffff;
+}
+
+.problem-card--accent .icon-tile {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  .problem-card {
+    grid-column: span 6;
+    min-height: 0;
+  }
+
+  .problem-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .problem-card,
+  .problem-card--wide,
+  .problem-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .problem-card-top {
+    padding-bottom: var(--s-2);
+  }
+}
