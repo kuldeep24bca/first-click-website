@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/variables.css?v=20260918" />
-  <link rel="stylesheet" href="../css/base.css?v=20260918" />
-  <link rel="stylesheet" href="../css/nav.css?v=20260918" />
-  <link rel="stylesheet" href="portfolio.css?v=20260918" />
+  <link rel="stylesheet" href="../css/variables.css?v=20260918.3" />
+  <link rel="stylesheet" href="../css/base.css?v=20260918.3" />
+  <link rel="stylesheet" href="../css/nav.css?v=20260918.3" />
+  <link rel="stylesheet" href="portfolio.css?v=20260918.3" />
 </head>
 <body class="portfolio">
 
@@ -36,6 +36,7 @@
     <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3.5l14 6.5-6 2-2 6zM13.5 13.5l5.5 5.5"/></symbol>
     <symbol id="i-funnel" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20.5 20.5L16 16"/></symbol>
   </svg>
 
@@ -535,15 +536,26 @@
           <div class="pf-cta-inner" data-reveal>
             <p class="eyebrow">Start a project</p>
             <h2 class="h2 pf-cta-title" id="ctaTitle">Got a Website That Needs to <span class="hl">Work Harder?</span></h2>
-            <p class="section-sub">Tell me about the business, the audience and what the site needs to achieve. I'll tell you what I'd build.</p>
-            <div class="pf-cta-actions">
-              <a class="btn btn-primary btn-lg" href="../index.html#contact">
-                Start a Project
-                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-              </a>
-              <a class="btn btn-outline-light btn-lg" href="../index.html">Visit First Click</a>
+            <p class="section-sub">Book a 30-minute call. Tell me about the business, the audience and what the site needs to achieve — I'll tell you what I'd build.</p>
+          </div>
+
+          <div class="pf-booking" data-reveal>
+            <div class="booking" id="book">
+              <div class="booking-head">
+                <div>
+                  <h3 class="booking-title" id="bookingTitle">Book a 30-minute call</h3>
+                  <p class="booking-sub">Pick a time that suits you. We'll talk through your business and what your website needs to do.</p>
+                </div>
+                <span class="booking-badge"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>30 min</span>
+              </div>
+              <div class="booking-frame-wrap">
+                <iframe class="booking-frame" src="https://calendly.com/thekuldeepgehlot-pmdigitals/30min?hide_event_type_details=1&amp;hide_gdpr_banner=1&amp;primary_color=cc4d06&amp;embed_type=Inline" title="Book a 30-minute call with Kuldeep Gehlot on Calendly" loading="lazy" aria-labelledby="bookingTitle"></iframe>
+              </div>
+              <p class="booking-fallback">Calendar not loading? <a href="https://calendly.com/thekuldeepgehlot-pmdigitals/30min" target="_blank" rel="noopener">Open it in Calendly</a></p>
             </div>
           </div>
+
+          <p class="pf-cta-more"><a href="../index.html">Visit First Click Agency <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
         </div>
       </div>
     </section>
@@ -580,6 +592,6 @@
     </div>
   </footer>
 
-  <script src="portfolio.js?v=20260918" defer></script>
+  <script src="portfolio.js?v=20260918.3" defer></script>
 </body>
 </html>

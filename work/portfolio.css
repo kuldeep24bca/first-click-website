@@ -542,12 +542,39 @@
   color: var(--text-2);
 }
 
-.pf-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: var(--s-2);
+.pf-booking {
+  max-width: 960px;
+  margin: var(--s-6) auto 0;
+}
+
+.pf-cta-more {
+  margin-top: var(--s-4);
+  text-align: center;
+}
+
+.pf-cta-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-2);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.pf-cta-more .icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.pf-cta-more a:hover {
+  color: #ffffff;
+}
+
+.pf-cta-more a:hover .icon {
+  transform: translateX(3px);
 }
 
 .pf-footer {

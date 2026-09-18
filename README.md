@@ -22,7 +22,13 @@ The brand orange `#CC4D06` was chosen as the brightest orange that keeps white b
 
 ## Configuration
 
-Every "Get My Website" button scrolls to the final call-to-action section. To send visitors to WhatsApp instead, set your number (country code + number, digits only) at the top of `js/main.js`:
+Bookings go through Calendly: the contact section on both pages embeds the
+30-minute call calendar, and every "Get My Website" / "Start a Project" button
+scrolls to it. To use a different event, change the `booking-frame` iframe
+`src` (and the fallback link beneath it) in `index.html` and `work/index.html`.
+
+To send the landing page's buttons straight to WhatsApp instead, set your
+number (country code + number, digits only) at the top of `js/main.js`:
 
 ```js
 const WHATSAPP_NUMBER = '919876543210';
@@ -36,7 +42,7 @@ Buttons then open WhatsApp with a pre-filled message, including the chosen packa
 python3 -m http.server 4180
 ```
 
-Then visit `http://localhost:4180`. Any static file server works. An internet connection is needed for the Poppins font from Google Fonts; without it the page falls back to system fonts.
+Then visit `http://localhost:4180`. Any static file server works. An internet connection is needed for the Poppins font (Google Fonts) and the booking calendar (Calendly); without it the page falls back to system fonts and shows a link to open Calendly directly.
 
 ## Project structure
 

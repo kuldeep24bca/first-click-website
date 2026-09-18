@@ -449,6 +449,126 @@ header[id] {
 }
 
 /* --------------------------------------------------------------------------
+   Booking card — Calendly inline calendar, shared by both pages
+   -------------------------------------------------------------------------- */
+
+.booking {
+  --text: var(--ink);
+  --text-2: var(--ink-2);
+  --text-3: var(--ink-3);
+  --focus: var(--orange);
+  display: grid;
+  gap: var(--s-2);
+  padding: clamp(12px, 1.6vw, 20px);
+  border-radius: var(--r-lg);
+  background: var(--white);
+  color: var(--ink-2);
+  box-shadow: 0 30px 60px -30px rgba(40, 16, 0, 0.55);
+}
+
+.booking-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding: 8px 8px 0;
+}
+
+.booking-title {
+  font-size: clamp(1.125rem, 1rem + 0.4vw, 1.375rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.booking-sub {
+  margin-top: 4px;
+  max-width: 46ch;
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.booking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: var(--r-xs);
+  background: var(--orange-50);
+  border: 1px solid var(--orange-100);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--orange);
+  white-space: nowrap;
+}
+
+.booking-badge .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.booking-frame-wrap {
+  position: relative;
+  height: 700px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--cream);
+}
+
+/* Shown until Calendly paints over it */
+.booking-frame-wrap::before {
+  content: "Loading calendar…";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
+
+.booking-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.booking-fallback {
+  padding: 0 8px 4px;
+  font-size: var(--fs-xs);
+  text-align: center;
+  color: var(--ink-3);
+}
+
+.booking-fallback a {
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  /* Give the calendar the ~320px Calendly needs on small phones */
+  .booking {
+    margin-inline: calc(var(--gutter) * -1 + 4px);
+    padding: 8px;
+  }
+
+  .booking-head {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .booking-frame-wrap {
+    height: 760px;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Motion: load entrance (hero) & scroll reveal (rest of page)
    -------------------------------------------------------------------------- */
 
