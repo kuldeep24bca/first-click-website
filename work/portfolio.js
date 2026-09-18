@@ -281,6 +281,14 @@
     });
   }
 
+  /* ---------- Booking calendar ----------
+     Calendly only hides its cookie banner when it knows the embedding site. */
+  document.querySelectorAll('.booking-frame').forEach((frame) => {
+    const url = new URL(frame.src);
+    url.searchParams.set('embed_domain', window.location.hostname);
+    frame.src = url.href;
+  });
+
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 })();
