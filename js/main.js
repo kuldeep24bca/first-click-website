@@ -51,7 +51,7 @@
   window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => e.matches && setMenu(false));
 
   /* ---------- Active nav indicator ---------- */
-  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const indicator = document.querySelector('.nav-indicator');
   const sectionFor = new Map(navLinks.map((a) => [document.querySelector(a.getAttribute('href')), a]));
 

@@ -389,6 +389,12 @@
   color: var(--text);
 }
 
+.work-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 @media (max-width: 1023px) {
   .work-card,
   .work-card--lg {
@@ -415,6 +421,7 @@
     display: none;
   }
 
+  .work-footer-actions,
   .work-footer .btn {
     width: 100%;
   }
