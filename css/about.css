@@ -87,6 +87,90 @@
   color: var(--ink);
 }
 
+/* Experience tags */
+.about-skills {
+  display: grid;
+  gap: 12px;
+}
+
+.about-skills-label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.about-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-skills-tags .tag {
+  min-height: 32px;
+  padding: 0 12px;
+  background: var(--white);
+  border-color: var(--line-strong);
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+
+.about-skills-tags .tag:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* Track record */
+.about-stats {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: var(--s-3) var(--s-3) var(--s-4);
+  border-left: 1px solid var(--line);
+}
+
+.about-stat:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.about-stat dt {
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
+
+.about-stat dd {
+  font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.about-stat em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.about-stat small {
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink-2);
+}
+
 .about-highlights {
   grid-column: 1 / -1;
   display: grid;
@@ -135,6 +219,19 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stat:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .about-stat:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
   .about-closing {
     grid-column: 1 / -1;
   }
@@ -159,5 +256,13 @@
 @media (max-width: 560px) {
   .about-highlights {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-stat {
+    padding: var(--s-2) var(--s-2) var(--s-3);
+  }
+
+  .about-stat dd {
+    font-size: 1.625rem;
   }
 }

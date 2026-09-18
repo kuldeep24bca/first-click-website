@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kuldeep Gehlot — Web Designer &amp; UI/UX Portfolio</title>
+  <meta name="description" content="Selected websites and landing pages by Kuldeep Gehlot — web designer and UI/UX designer. Hover any preview to scroll the real site." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta property="og:title" content="Kuldeep Gehlot — Web Designer &amp; UI/UX Portfolio" />
+  <meta property="og:description" content="Selected websites and landing pages. Hover any preview to scroll the real site." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/variables.css?v=20260918" />
+  <link rel="stylesheet" href="../css/base.css?v=20260918" />
+  <link rel="stylesheet" href="../css/nav.css?v=20260918" />
+  <link rel="stylesheet" href="portfolio.css?v=20260918" />
+</head>
+<body class="portfolio">
+
+  <svg width="0" height="0" class="visually-hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+    <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M12 4v16M8.5 7.5L12 4l3.5 3.5M8.5 16.5L12 20l3.5-3.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19.5l7-7 3 3-7 7zM18 13.5l-1.5-7.5L3 2.5l3.5 13.5 7.5 1.5zM3 2.5l7.6 7.6"/><circle cx="11.5" cy="11.5" r="2"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9h18M9.5 21V9"/></symbol>
+    <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3.5l14 6.5-6 2-2 6zM13.5 13.5l5.5 5.5"/></symbol>
+    <symbol id="i-funnel" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20.5 20.5L16 16"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <!-- ======================================================================
+       NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="../index.html" aria-label="First Click Agency — home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#cc4d06"/>
+          <path d="M12.5 10.5l10.5 4.6-4.4 1.5-1.9 4.4z" fill="#fff"/>
+          <path d="M9.6 7.4l1.1 1.5M7.5 11.2h1.9M12.6 6.3v1.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">First Click Agency</span>
+      </a>
+
+      <div class="nav-links-wrap">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm nav-cta" href="#contact">
+          Start a Project
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-links container">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li class="mobile-menu-cta">
+          <a class="btn btn-primary btn-lg btn-block" href="#contact">
+            Start a Project
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ====================================================================
+         HERO
+         ==================================================================== -->
+    <section class="pf-hero" id="top" aria-labelledby="heroTitle">
+      <div class="container">
+        <p class="pf-eyebrow">Web Designer <span aria-hidden="true">•</span> UI/UX <span aria-hidden="true">•</span> Digital Experiences</p>
+
+        <h1 class="pf-hero-title" id="heroTitle">I Design Websites<br />People <span class="hl">Remember.</span></h1>
+
+        <div class="pf-hero-bottom">
+          <p class="pf-hero-text">
+            I'm Kuldeep Gehlot. For the past several years I've designed websites, landing pages and sales funnels for brands across 20+ niches — work that has to look sharp and still do its job: get the visitor to act.
+          </p>
+
+          <div class="pf-hero-actions">
+            <a class="btn btn-primary btn-lg" href="#work">
+              Explore My Work
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+            <a class="btn btn-secondary btn-lg" href="#contact">Start a Project</a>
+          </div>
+        </div>
+
+        <dl class="pf-stats">
+          <div class="pf-stat">
+            <dt>Clients served</dt>
+            <dd><span data-count="50">50</span><em>+</em></dd>
+          </div>
+          <div class="pf-stat">
+            <dt>Niches worked in</dt>
+            <dd><span data-count="20">20</span><em>+</em></dd>
+          </div>
+          <div class="pf-stat">
+            <dt>Revenue generated</dt>
+            <dd><em>₹</em><span data-count="30">30</span><em>+</em> <small>Lakhs</small></dd>
+          </div>
+          <div class="pf-stat">
+            <dt>Working since</dt>
+            <dd>Class <span>8</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         SELECTED WORK — filters + interactive browser previews
+         Each project: one <article>. To add one, copy a block, set
+         data-category, the URL, the name and drop a full-page screenshot
+         into assets/previews/.
+         ==================================================================== -->
+    <section class="section pf-work" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head section-head--split" data-reveal>
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 class="h2" id="workTitle">Real Websites. <span class="hl">Hover to Explore</span> Them.</h2>
+          </div>
+          <p class="section-sub">Every preview below is the live site. Hover a window and it scrolls through the whole page — then open the real thing in a new tab.</p>
+        </div>
+
+        <div class="pf-filters" role="group" aria-label="Filter projects by category" data-filters>
+          <button class="pf-filter is-active" type="button" data-filter="all" aria-pressed="true">All <span class="pf-filter-count">12</span></button>
+          <button class="pf-filter" type="button" data-filter="saas" aria-pressed="false">SaaS</button>
+          <button class="pf-filter" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+          <button class="pf-filter" type="button" data-filter="agency" aria-pressed="false">Agency</button>
+          <button class="pf-filter" type="button" data-filter="landing" aria-pressed="false">Landing Page</button>
+          <button class="pf-filter" type="button" data-filter="restaurant" aria-pressed="false">Restaurant</button>
+          <button class="pf-filter" type="button" data-filter="education" aria-pressed="false">Education</button>
+          <button class="pf-filter" type="button" data-filter="portfolio" aria-pressed="false">Portfolio</button>
+        </div>
+        <p class="pf-filter-status visually-hidden" role="status" aria-live="polite"></p>
+
+        <div class="bento pf-grid" id="projectGrid">
+
+          <!-- 1 -->
+          <article class="project project--lg" data-category="ecommerce" data-reveal>
+            <a class="project-frame" href="https://www.culturekings.com.au/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Culture Kings — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">culturekings.com.au</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/culture-kings.webp" alt="Full-page preview of the Culture Kings website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Culture Kings</h3>
+                <span class="project-badge">E-commerce</span>
+              </div>
+              <p class="project-desc">Streetwear retail at scale — bold product storytelling with a shop experience built to keep browsers moving toward checkout.</p>
+              <p class="project-services">UI/UX • Web Design • E-commerce</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="project project--md" data-category="ecommerce" data-reveal>
+            <a class="project-frame" href="https://buytoolkit.in/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Buytoolkit — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">buytoolkit.in</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/buytoolkit.webp" alt="Full-page preview of the Buytoolkit website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Buytoolkit</h3>
+                <span class="project-badge">E-commerce</span>
+              </div>
+              <p class="project-desc">A power-tools store built for browsing by category — offers, product rows and pricing kept legible at speed.</p>
+              <p class="project-services">UI/UX • Web Design • E-commerce</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="project project--sm" data-category="restaurant" data-reveal>
+            <a class="project-frame" href="https://mokaiwebsite.netlify.app/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Mokai — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">mokai.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/mokai.webp" alt="Full-page preview of the Mokai restaurant website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Mokai</h3>
+                <span class="project-badge">Restaurant</span>
+              </div>
+              <p class="project-desc">Pali Hill dining — an image-led site that sells the room before it sells the menu.</p>
+              <p class="project-services">UI/UX • Web Design</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="project project--sm" data-category="restaurant" data-reveal>
+            <a class="project-frame" href="https://hedgehogcafewebsite.netlify.app/" target="_blank" rel="noopener noreferrer" data-preview aria-label="The Hedgehog Cafe — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">hedgehogcafe.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/hedgehog-cafe.webp" alt="Full-page preview of The Hedgehog Cafe website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">The Hedgehog Cafe</h3>
+                <span class="project-badge">Restaurant</span>
+              </div>
+              <p class="project-desc">Chandigarh café — menu, atmosphere and directions in one phone-first scroll.</p>
+              <p class="project-services">UI/UX • Web Design</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="project project--sm" data-category="portfolio" data-reveal>
+            <a class="project-frame" href="https://gagannewwebsite.netlify.app/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Gagz Brar Makeovers — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">gagzbrarmakeovers.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/gagz-brar.webp" alt="Full-page preview of the Gagz Brar Makeovers website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Gagz Brar Makeovers</h3>
+                <span class="project-badge">Portfolio</span>
+              </div>
+              <p class="project-desc">Bridal &amp; glamour makeup artistry — the work leads, and booking is one tap away.</p>
+              <p class="project-services">UI/UX • Web Design</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="project project--md" data-category="education" data-reveal>
+            <a class="project-frame" href="https://learncanyon.com/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Learn Canyon — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">learncanyon.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/learn-canyon.webp" alt="Full-page preview of the Learn Canyon website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Learn Canyon</h3>
+                <span class="project-badge">Education</span>
+              </div>
+              <p class="project-desc">A learning platform homepage that turns a curious visitor into an enrolled learner.</p>
+              <p class="project-services">UI/UX • Web Design • Development</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="project project--lg" data-category="landing" data-reveal>
+            <a class="project-frame" href="https://rahulmalodia.com/landing-page/new-v2c" target="_blank" rel="noopener noreferrer" data-preview aria-label="Vyapari to CEO — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">rahulmalodia.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/vyapari-to-ceo.webp" alt="Full-page preview of the Vyapari to CEO landing page" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Vyapari to CEO</h3>
+                <span class="project-badge">Landing Page</span>
+              </div>
+              <p class="project-desc">A business-coaching event page built around one action: register. Proof, agenda and pricing stacked in the order people decide.</p>
+              <p class="project-services">UI/UX • Landing Page • Funnel</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="project project--lg" data-category="saas" data-reveal>
+            <a class="project-frame" href="https://www.expertbells.com/" target="_blank" rel="noopener noreferrer" data-preview aria-label="ExpertBells — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">expertbells.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/expertbells.webp" alt="Full-page preview of the ExpertBells website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">ExpertBells</h3>
+                <span class="project-badge">SaaS</span>
+              </div>
+              <p class="project-desc">A marketplace connecting founders with mentors, investors and business experts — search-first, with trust signals throughout.</p>
+              <p class="project-services">UI/UX • Web Design • Development</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="project project--md" data-category="saas" data-reveal>
+            <a class="project-frame" href="https://www.surjen.com/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Surjen — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">surjen.com</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/surjen.webp" alt="Full-page preview of the Surjen website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Surjen</h3>
+                <span class="project-badge">SaaS</span>
+              </div>
+              <p class="project-desc">At-home lab test booking for Lagos and Abuja — a health service turned into a simple, bookable flow.</p>
+              <p class="project-services">UI/UX • Web Design</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="project project--sm" data-category="agency" data-reveal>
+            <a class="project-frame" href="https://madhatmarketing.co/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Mad Hat Marketing — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">madhatmarketing.co</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/madhat.webp" alt="Full-page preview of the Mad Hat Marketing website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Mad Hat Marketing</h3>
+                <span class="project-badge">Agency</span>
+              </div>
+              <p class="project-desc">An agency site with punchy service storytelling and one obvious next step on every screen.</p>
+              <p class="project-services">UI/UX • Web Design</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="project project--sm" data-category="education" data-reveal>
+            <a class="project-frame" href="https://join.theoccultacademy.in/3dayscourse" target="_blank" rel="noopener noreferrer" data-preview aria-label="The Occult Academy — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">theoccultacademy.in</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/occult-academy.webp" alt="Full-page preview of The Occult Academy course page" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">The Occult Academy</h3>
+                <span class="project-badge">Education</span>
+              </div>
+              <p class="project-desc">A 3-day course funnel — one promise, one enrolment action, no detours.</p>
+              <p class="project-services">UI/UX • Landing Page • Funnel</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="project project--sm" data-category="ecommerce" data-reveal>
+            <a class="project-frame" href="https://www.melko.com.au/" target="_blank" rel="noopener noreferrer" data-preview aria-label="Melko — open the live website in a new tab">
+              <span class="browser-bar" aria-hidden="true">
+                <span class="browser-dots"><i></i><i></i><i></i></span>
+                <span class="browser-url">melko.com.au</span>
+                <svg class="browser-open icon"><use href="#i-external"/></svg>
+              </span>
+              <span class="browser-view">
+                <img class="browser-shot" src="assets/previews/melko.webp" alt="Full-page preview of the Melko website" loading="lazy" decoding="async" />
+                <span class="preview-hint"><svg class="icon" aria-hidden="true"><use href="#i-scroll"/></svg><span class="preview-hint-text">Hover to Explore</span></span>
+              </span>
+            </a>
+            <div class="project-info">
+              <div class="project-head">
+                <h3 class="project-name">Melko</h3>
+                <span class="project-badge">E-commerce</span>
+              </div>
+              <p class="project-desc">An Australian fashion label with an editorial catalogue and a frictionless mobile buying flow.</p>
+              <p class="project-services">UI/UX • Web Design • E-commerce</p>
+              <span class="project-cta">View Live Website <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="pf-empty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         ABOUT
+         ==================================================================== -->
+    <section class="section theme-cream pf-about" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="bento pf-about-grid">
+          <div class="pf-about-copy" data-reveal>
+            <p class="eyebrow">About</p>
+            <h2 class="h2" id="aboutTitle">Designing for the Web Since <span class="hl">Class 8</span></h2>
+            <p class="pf-about-lead">I'm Kuldeep Gehlot — a Digital Marketer, UI/UX &amp; Web Designer, and Entrepreneur.</p>
+            <p>I've worked with 50+ clients across 20+ different niches and generated ₹30+ Lakhs in revenue through digital marketing and digital projects. Most of that work looks like the previews above: websites, landing pages and funnels where design and conversion are the same conversation.</p>
+            <p>Alongside client work, I share what I've learned through workshops and educational content — helping students apply digital skills to real projects.</p>
+          </div>
+
+          <ul class="pf-about-list" data-stagger>
+            <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Design that's judged on what it converts, not just how it looks</li>
+            <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Built mobile-first — most of this traffic arrives on a phone</li>
+            <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>From first wireframe to live site, handled end to end</li>
+            <li data-reveal><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Worked across e-commerce, SaaS, education, hospitality &amp; coaching</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         SERVICES
+         ==================================================================== -->
+    <section class="section pf-services" id="services" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Services</p>
+          <h2 class="h2" id="servicesTitle">What I Do</h2>
+          <p class="section-sub">Four things, done properly — from the first wireframe to the live page.</p>
+        </div>
+
+        <div class="bento pf-services-grid" data-stagger>
+          <article class="card card-hover pf-service" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></span>
+            <h3 class="card-title">UI/UX Design</h3>
+            <p class="card-text">Wireframes, user flows and interface design built on how people actually read and decide.</p>
+          </article>
+          <article class="card card-hover pf-service" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg></span>
+            <h3 class="card-title">Web Design</h3>
+            <p class="card-text">Complete websites — structure, copy layout, visual system and a responsive build.</p>
+          </article>
+          <article class="card card-hover pf-service" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-cursor"/></svg></span>
+            <h3 class="card-title">Landing Pages</h3>
+            <p class="card-text">Single-purpose pages for launches, webinars and offers, shaped around one clear action.</p>
+          </article>
+          <article class="card card-hover pf-service" data-reveal>
+            <span class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-funnel"/></svg></span>
+            <h3 class="card-title">Sales Funnels</h3>
+            <p class="card-text">Opt-ins, checkouts and follow-through — the full path from ad click to customer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         FINAL CTA
+         ==================================================================== -->
+    <section class="section-boxed pf-cta-section" id="contact" aria-labelledby="ctaTitle">
+      <div class="panel theme-dark pf-cta">
+        <div class="container">
+          <div class="pf-cta-inner" data-reveal>
+            <p class="eyebrow">Start a project</p>
+            <h2 class="h2 pf-cta-title" id="ctaTitle">Got a Website That Needs to <span class="hl">Work Harder?</span></h2>
+            <p class="section-sub">Tell me about the business, the audience and what the site needs to achieve. I'll tell you what I'd build.</p>
+            <div class="pf-cta-actions">
+              <a class="btn btn-primary btn-lg" href="../index.html#contact">
+                Start a Project
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <a class="btn btn-outline-light btn-lg" href="../index.html">Visit First Click</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="pf-footer">
+    <div class="container">
+      <div class="pf-footer-inner">
+        <a class="brand" href="../index.html" aria-label="First Click Agency — home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#cc4d06"/>
+            <path d="M12.5 10.5l10.5 4.6-4.4 1.5-1.9 4.4z" fill="#fff"/>
+            <path d="M9.6 7.4l1.1 1.5M7.5 11.2h1.9M12.6 6.3v1.9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">First Click Agency</span>
+        </a>
+        <p class="pf-footer-text">Web Designer • UI/UX • Digital Experiences</p>
+        <nav class="pf-footer-nav" aria-label="Footer">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="../index.html">First Click</a>
+        </nav>
+      </div>
+      <div class="pf-footer-bottom">
+        <p>© <span data-year>2026</span> Kuldeep Gehlot. All rights reserved.</p>
+        <a href="#top" class="pf-footer-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="portfolio.js?v=20260918" defer></script>
+</body>
+</html>

@@ -115,6 +115,11 @@
           if (!entry.isIntersecting) return;
           const el = entry.target;
           const target = Number(el.dataset.count);
+          observer.unobserve(el);
+          if (document.hidden) {
+            el.textContent = target;
+            return;
+          }
           const start = performance.now();
           const duration = 1100;
           const tick = (now) => {
@@ -123,7 +128,6 @@
             if (p < 1) requestAnimationFrame(tick);
           };
           requestAnimationFrame(tick);
-          observer.unobserve(el);
         });
       },
       { threshold: 0.6 }
